@@ -1,4 +1,4 @@
-# App-Gym
+# 🏋️‍♀️ App-Gym
 
 O App-Gym é um aplicativo em React Native para acessar uma coleção de exercícios de academia. Ele possui navegação intuitiva usando tanto navegação em pilha quanto em abas, utilizando o NativeBase para um design moderno.
 
@@ -6,13 +6,13 @@ O App-Gym é um aplicativo em React Native para acessar uma coleção de exercí
 
 - Navegue por uma diversa biblioteca de exercícios de academia.
 - Utilize tanto a navegação em pilha para rotas públicas quanto a navegação em abas para rotas privadas.
-- Design elegante alcançado através de componentes NativeBase.
+- Design elegante alcançado através de componentes [NativeBase](https://img.shields.io/badge/-NativeBase-#000000?style=flat-square&logo=nativebase&logoColor=white).
 
 ## Tecnologias Utilizadas
 
-- React Native
-- NativeBase
-- Expo
+- [![React Native](https://img.shields.io/badge/-React%20Native-61DAFB?style=flat-square&logo=react&logoColor=white)](https://reactnative.dev/)
+- [![NativeBase](https://img.shields.io/badge/-NativeBase-#000000?style=flat-square&logo=nativebase&logoColor=white)](https://nativebase.io/)
+- [![Expo](https://img.shields.io/badge/-Expo-000020?style=flat-square&logo=expo&logoColor=white)](https://expo.dev/)
 
 ## Instalação
 
