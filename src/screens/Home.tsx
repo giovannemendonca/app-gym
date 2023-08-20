@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { HomeHeader } from "@components/HomeHeader";
-import { VStack, FlatList, HStack, Heading, Text } from "native-base";
+import {
+  VStack,
+  FlatList,
+  HStack,
+  Heading,
+  Text,
+} from "native-base";
 import { Group } from "./Group";
 import { ExerciseCard } from "@components/ExerciseCard";
+import { useNavigation } from "@react-navigation/native";
+import { AppNavigatorRautesProps } from "@routes/app.routes";
 
 export function Home() {
   const [groups, setGroups] = useState<string[]>([
@@ -22,6 +30,12 @@ export function Home() {
 
   const [groupSelected, setGroupSelected] = useState<string>("Costas");
 
+  const navigate = useNavigation<AppNavigatorRautesProps>();
+
+  const hanlderOpenExerciseDetails = () => {
+    navigate.navigate("exercise");
+  };
+
   return (
     <VStack flex={1}>
       <HomeHeader />
@@ -33,9 +47,7 @@ export function Home() {
           <Group
             onPress={() => setGroupSelected(item)}
             name={item}
-            isAciveted={
-              item.toUpperCase() === groupSelected.toUpperCase()
-            }
+            isAciveted={item.toUpperCase() === groupSelected.toUpperCase()}
           />
         )}
         horizontal
@@ -45,6 +57,7 @@ export function Home() {
         }}
         my={10}
         maxH={10}
+        minH={10}
       />
 
       <VStack flex={1} px={8}>
@@ -60,7 +73,9 @@ export function Home() {
         <FlatList
           data={exercises}
           keyExtractor={(item) => item}
-          renderItem={(item) => <ExerciseCard />}
+          renderItem={(item) => (
+            <ExerciseCard onPress={hanlderOpenExerciseDetails} />
+          )}
           showsVerticalScrollIndicator={false}
           _contentContainerStyle={{
             pb: 20,
