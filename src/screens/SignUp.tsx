@@ -138,7 +138,7 @@ export function SignUp() {
           />
         </Center>
 
-        <Center mt={24}>
+        <Center mt={16}>
           <Button
             title="Voltar para o login"
             variant="outline"
