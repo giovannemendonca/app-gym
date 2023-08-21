@@ -5,7 +5,6 @@ import { AuthRoutes } from "./auth.routes";
 import { AppRoutes } from "./app.routes";
 
 export function Routes() {
-  
   const { colors } = useTheme();
   const theme = DefaultTheme;
 
@@ -14,8 +13,8 @@ export function Routes() {
   return (
     <Box flex={1} bg="gray.700">
       <NavigationContainer>
-        {/* <AuthRoutes /> */}
-        <AppRoutes />
+        <AuthRoutes />
+        {/*  <AppRoutes /> */}
       </NavigationContainer>
     </Box>
   );
